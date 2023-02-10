@@ -1,0 +1,12 @@
+prefix=/app
+libdir=/app/lib
+includedir=/app/include
+
+Name: poppler-qt5
+Description: Qt5 bindings for poppler
+Version: 22.07.0
+Requires: 
+Requires.private: poppler = 22.07.0
+
+Libs: -L${libdir} -lpoppler-qt5
+Cflags: -I${includedir}/poppler/qt5

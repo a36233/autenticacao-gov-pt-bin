@@ -1,0 +1,24 @@
+[Application]
+name=pt.gov.autenticacao
+runtime=org.kde.Platform/x86_64/5.15-21.08
+sdk=org.kde.Sdk/x86_64/5.15-21.08
+command=eidguiV2
+
+[Context]
+shared=network;ipc;
+sockets=x11;wayland;pcsc;cups;
+devices=dri;
+filesystems=home;xdg-config/kdeglobals:ro;
+
+[Session Bus Policy]
+com.canonical.AppMenu.Registrar=talk
+org.kde.kconfig.notify=talk
+org.kde.KGlobalSettings=talk
+
+[Extension pt.gov.autenticacao.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=pt.gov.autenticacao.Debug;
